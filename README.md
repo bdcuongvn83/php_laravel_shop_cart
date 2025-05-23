@@ -25,7 +25,15 @@
 
 ## Running
 
-- Install Laravel  
-- Clone project  
-- Cd folder source, run cmd  
+- Install Laravel
+
+- Clone the project
+
+- Install XAMPP
+
+- Start XAMPP to launch Apache Server and MySQL
+
+- Open a terminal and navigate to the project folder
+
+Run the command:  
 php artisan serve
