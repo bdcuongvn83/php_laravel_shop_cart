@@ -35,14 +35,27 @@
         main {
             padding: 20px;
         }
-        footer {
+        /* footer {
             background-color: #f1f1f1;
             padding: 15px;
-            text-align: center;
+            
             position: fixed;
             bottom: 0;
             width: 100%;
             border-top: 1px solid #ccc;
+        } */
+
+        footer {
+            background-color: #f1f1f1;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ccc;
+
+            display: flex;                
+            justify-content: space-between; 
+            align-items: center;        
         }
         .nav-left a {
             color: blue;
@@ -50,7 +63,7 @@
             text-decoration: none;
         }
 
-         .nav-left a:hover {
+        .nav-left a:hover {
         text-decoration: underline;
         }
 
@@ -137,11 +150,16 @@
 
 <main>
     <h1>Welcome to Dashboard!</h1>
-    Hello, {{ Auth::guard('employee')->user()->name }}
+  
 </main>
 
 <footer>
-    &copy; {{ date('Y') }} My Laravel App. All rights reserved - Author: DUC CUONG BUI - EMAIL: bdcuongvn83@gmail.com
+    <div class="nav-left">
+         &copy; {{ date('Y') }} My Laravel App. All rights reserved 
+    </div>
+    <div class="nav-right">
+        Author: DUC CUONG BUI &nbsp;&nbsp;&nbsp;
+  </div>
 </footer>
 
 </body>

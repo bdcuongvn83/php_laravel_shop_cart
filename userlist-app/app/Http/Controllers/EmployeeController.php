@@ -21,11 +21,13 @@ class EmployeeController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:employees,email',
+             'password' => 'required|string|max:10|min:3',
         ]);
 
         Employee::create([
             'name' => $request->name,
             'email' => $request->email,
+            'password' => $request->password,
         ]);
 
         return redirect()->route('employees.index')->with('success', 'Employee created successfully.');
@@ -40,6 +42,7 @@ class EmployeeController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
+            'password' => 'required|string|max:10|min:3',
             'email' => 'required|email|unique:employees,email,' . $id,
         ]);
 
@@ -47,6 +50,7 @@ class EmployeeController extends Controller
         $employee->update([
             'name' => $request->name,
             'email' => $request->email,
+            'password' => $request->password,
         ]);
 
         return redirect()->route('employees.index')->with('success', 'Employee updated successfully!');

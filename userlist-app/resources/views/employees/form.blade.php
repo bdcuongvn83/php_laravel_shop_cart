@@ -27,6 +27,10 @@
             <label>Email:</label>
             <input type="email" name="email" value="{{ $employee->email  }}">
         </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password" value="{{ $employee->password  }}">
+        </div>
         <button type="submit">Save</button>
     </form>
 @endsection
