@@ -12,10 +12,15 @@ return [
     | as required, but they're a perfect start for most applications.
     |
     */
-
+//TODO cuong fix
+    // 'defaults' => [
+    //     'guard' => env('AUTH_GUARD', 'web'),
+    //     'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
+    // ],
+    // ✅ Đổi lại thành 'web' để sử dụng guard mặc định của Laravel
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'users'),
+    'guard' => 'employee',       // dùng guard mới tên là 'employee'
+    'passwords' => 'employees',  // dùng cấu hình reset password cho bảng employees
     ],
 
     /*
@@ -39,6 +44,11 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+         // ✅ Guard mới cho Employee
+        'employee' => [
+            'driver' => 'session',
+            'provider' => 'employees',
         ],
     ],
 
@@ -69,7 +79,12 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
-    ],
+          // ✅ Provider mới cho Employee
+        'employees' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Employee::class,
+        ],
+        ],
 
     /*
     |--------------------------------------------------------------------------
