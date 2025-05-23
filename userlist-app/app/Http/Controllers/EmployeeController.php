@@ -27,7 +27,7 @@ class EmployeeController extends Controller
         Employee::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => bcrypt($request->password), // mã hóa tại đây
         ]);
 
         return redirect()->route('employees.index')->with('success', 'Employee created successfully.');
@@ -42,16 +42,27 @@ class EmployeeController extends Controller
     {
         $request->validate([
             'name' => 'required|string|max:255',
-            'password' => 'required|string|max:10|min:3',
+          
             'email' => 'required|email|unique:employees,email,' . $id,
         ]);
 
         $employee = Employee::findOrFail($id);
-        $employee->update([
+        // $employee->update([
+        //     'name' => $request->name,
+        //     'email' => $request->email,
+        //     'password' => $request->password,
+        // ]);
+
+        $data = [
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
-        ]);
+        ];
+
+        if ($request->filled('password')) {
+            $data['password'] = bcrypt($request->password); // mã hóa nếu có nhập
+        }
+
+        $employee->update($data);
 
         return redirect()->route('employees.index')->with('success', 'Employee updated successfully!');
     }
