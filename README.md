@@ -26,28 +26,34 @@ php_laravel_shop_cart is a simple demo web application built with Laravel. It in
 ![image](https://github.com/user-attachments/assets/6c81d206-5786-48ba-8b25-12c18cd99903)
 
 
-![image](https://github.com/user-attachments/assets/d728e8ea-ee91-48a7-9655-5fd9860d437a)
 
-![image](https://github.com/user-attachments/assets/95b69e91-4747-4a83-bf77-e9701cce907a)
 
+![image](https://github.com/user-attachments/assets/ba713e67-0440-47c5-8bf2-be5525e89d89)
 
 ## Create new employees  
-![image](https://github.com/user-attachments/assets/22dd8299-768a-4849-91a1-5fe0ce283b20)
+![image](https://github.com/user-attachments/assets/1c3fc419-5608-4f9d-bf58-607bacf59748)
+
+![image](https://github.com/user-attachments/assets/8cf4ed2c-bebd-4e16-950a-4ea758f59f7e)
+
+
 
 ## Update employees
+![image](https://github.com/user-attachments/assets/d6ad4fd2-fb72-49cd-8292-19da82fb17e0)
 
-![image](https://github.com/user-attachments/assets/952cf86e-367e-443e-9d8f-609b8855f3cd)
-
+![image](https://github.com/user-attachments/assets/4231fcd9-e9c8-4fa8-a52b-f65b70203e2f)
 
 ## Delete  
 
-![image](https://github.com/user-attachments/assets/096db241-d9fc-45f8-9f86-7a83d05c4d6e)
+![image](https://github.com/user-attachments/assets/b3456f9a-f842-47c2-8871-5473dc96cad8)
 
-![image](https://github.com/user-attachments/assets/0ea9370f-1a21-4e21-a1e5-029641631a8f)
+
+![image](https://github.com/user-attachments/assets/20d31349-403b-45fb-beea-fbd7b07c6679)
+
 
 ## Database  
 
-![image](https://github.com/user-attachments/assets/3e12883e-0a11-415e-a349-d90b0eeda01a)
+![image](https://github.com/user-attachments/assets/7d61a1ac-75b0-433c-b6e6-a1d89fa27686)
+
 
 
 ## Running
